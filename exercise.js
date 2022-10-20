@@ -16,3 +16,8 @@ function secondPromise(number) {
     rej("Something went wrong.");
   });
 }
+
+firstPromise(isLogged)
+  .then((res) => secondPromise(res))
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
